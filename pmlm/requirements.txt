@@ -1,0 +1,15 @@
+lmdb
+numpy==1.23.2
+fairseq==0.10.2
+scipy
+pyarrow
+pandas
+scikit-learn
+cython
+biopython==1.74
+tensorboard
+tensorboardX
+tensorboard_logger
+pathlib2
+tqdm
+matplotlib
