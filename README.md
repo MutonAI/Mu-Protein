@@ -5,7 +5,7 @@ This repository consists of three main components:
 
 - **`pmlm/`** – Protein language model pretraining  
 - **`mu-former/`** – Fitness landscape modeling using the pretrained protein language model  
-- **`mu-search/`** – Navigating the constructed fitness landscape oracle  
+- **`mu-search/`** – Navigating the constructed fitness landscape oracle with reinforcement learning  
 
 For more details, refer to the respective README files:  
 
