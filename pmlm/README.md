@@ -6,8 +6,8 @@ The folder primarily hosts the code for pre-training pairwise masked language mo
 
 Follow the steps below to set up the Conda environment:
 ```
-conda create -n mutation python==3.8  
-conda activate mutation  
+conda create -n pmlm python==3.8  
+conda activate pmlm  
 pip install -r requirements.txt  
 ```
 
