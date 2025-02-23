@@ -27,7 +27,7 @@ The pre-trained encoder and sample datasets for fine-tuning are publicly accessi
 If you're using a single GPU card, you can run the application using the following command:
 
 ```
-python main.py --decoder-name siamese --encoder-lr 1e-5 --decoder-lr 1e-4 \
+python main.py --decoder-name siamese --encoder-lr 1e-6 --decoder-lr 1e-4 \
   --epochs 300 --warmup-epochs 10 --batch-size 8 \
   --pretrained-model <path/to/uformer_l_encoder.pt> \
   --fasta <path/to/fasta>  \
@@ -40,7 +40,7 @@ python main.py --decoder-name siamese --encoder-lr 1e-5 --decoder-lr 1e-4 \
 In case you're running the program on a node with multiple GPU cards (4, for example), the command can be adjusted as follows:
 ```
 python -m torch.distributed.run --nnodes=1 --nproc_per_node=4 --node_rank=0 --master_port=6005 \
-  main.py --decoder-name siamese --encoder-lr 1e-5 --decoder-lr 1e-4 --batch-size 2 \
+  main.py --decoder-name siamese --encoder-lr 1e-6 --decoder-lr 1e-4 --batch-size 2 \
   --epochs 300 --warmup-epochs 10 \
   --pretrained-model <path/to/uformer_l_encoder.pt> \
   --fasta <path/to/fasta>  \
@@ -58,7 +58,7 @@ You can then run the following command to test the setup:
 
 ```
 python -m torch.distributed.run --nnodes=1 --nproc_per_node=4 --node_rank=0 --master_port=6005 \
-  main.py --decoder-name siamese --encoder-lr 1e-5 --decoder-lr 1e-4 --batch-size 2 \
+  main.py --decoder-name siamese --encoder-lr 1e-6 --decoder-lr 1e-4 --batch-size 2 \
   --epochs 300 --warmup-epochs 10 \
   --pretrained-model ckpt/uformer_l_encoder.pt \
   --fasta data/example/IF1_ECOLI_Kelsic_2016.fasta  \
