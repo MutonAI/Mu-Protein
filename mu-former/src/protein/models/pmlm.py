@@ -67,7 +67,6 @@ class ProtPairwiseModel(BaseFairseqModel):
                     'max_positions': args.max_positions, 
                     'tokens_per_sample': args.tokens_per_sample,
                     'arch': args.arch,
-                    'eval_task': args.eval_task,
                 },
                 suffix=getattr(args, "checkpoint_suffix", ""),
                 task=task,
